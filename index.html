@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test</title>
-  </head>
-  <body></body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Game Guide</title>
+<h1>Guide Game</h1>
+</head>
+<body>
+    <div class="main">
+        <h2 class="main-header">Soccer Team Name</h2>
+        <section class="main-input">
+            <textarea
+                name="comment"
+                id="comment"
+                class="main-comment-input"
+                placeholder="Your Comment"></textarea>
+                <button class="Get-Stats" 
+                onClick="onStatsButtonClick()">Get Stats</button>
+            </section>
+            <section class="main-result"> 
+                <p id="result-block">
+                    <span>Result:</span>
+                    <span id="result"></span>
+                </p>   
+                </section>
+    </div>
+    <script src="script.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+</body>
 </html>
