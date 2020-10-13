@@ -5,66 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
       <title>Game Guide</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
-    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-        </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item">
-            About
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+      <link rel="stylesheet" href="style.css">
+
+      <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="logo.png" width="50" height="100">
           </a>
-          <a class="navbar-item">
-            APIs
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Soccer
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              About
             </a>
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                News
+            <a class="navbar-item">
+              APIs
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Soccer
               </a>
-              <a class="navbar-item">
-                Fixtures
-              </a>
-              <a class="navbar-item">
-                Leagues
-              </a>
-              <a class="navbar-item">
-                International
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item">
-                Socials
-              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  News
+                </a>
+                <a class="navbar-item">
+                  Fixtures
+                </a>
+                <a class="navbar-item">
+                  Leagues
+                </a>
+                <a class="navbar-item">
+                  International
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Socials
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary">
+                  <strong>Sign up</strong>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <section class="hero">
+      </nav>
+      
+      <section class="hero is-primary is-medium">
         <div class="hero-body">
           <div class="container">
-            <h1 class="title">
+            <h1 class="title is-family-code is-size-1">
               Game Guide
             </h1>
             <h2 class="subtitle">
@@ -73,17 +76,18 @@
           </div>
         </div>
       </section>
-      </head>
+    </head>
+
 <body>
 <div class="tile is-ancestor">
   <div class="tile is-vertical is-8">
     <div class="tile">
       <div class="tile is-parent is-vertical">
-        <article class="tile is-child notification is-primary">
+        <article class="tile is-child notification has-background-success has-text-white">
           <p class="title">Upcoming Matches</p>
           <p class="subtitle"></p>
         </article>
-        <article class="tile is-child notification is-warning">
+        <article class="tile is-child notification is-info has-text-white">
           <p class="title">Teams</p>
           <p class="subtitle"></p>
           <div class="content">
@@ -93,7 +97,7 @@
       </div>
     </div>
     <div class="tile is-parent">
-      <article class="tile is-child notification is-danger">
+      <article class="tile is-child notification is-info has-text-white">
         <p class="title">Players</p>
         <p class="subtitle"></p>
         <div class="content">
@@ -104,7 +108,7 @@
     </div>
   </div>
   <div class="tile is-parent">
-    <article class="tile is-child notification is-success">
+    <article class="tile is-child notification has-background-danger has-text-white" id="classNews">
       <div class="content">
         <p class="title">News</p>
         <p class="subtitle">Recent Soccer Headlines</p>
