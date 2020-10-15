@@ -7,3 +7,5 @@ Technologies Used:
 -Bulma
 -Javascript
 -JQuery
+
+https://bcummings32.github.io/Project-1-Soccer-Scores/
