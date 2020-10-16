@@ -49,10 +49,27 @@
                 </a>
               </div>
             </div>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">
+                Football
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">
+                  News
+                </a>
+                <a class="navbar-item">
+                  Games
+                </a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">
+                  Socials
+                </a>
+              </div>
+            </div>
           </div>
               </div>
       </nav>
-      <section class="hero is-primary is-medium">
+      <section class="hero is-primary is-small">
         <div class="hero-body">
           <div class="container">
             <h1 class="title is-family-code is-size-1">
@@ -67,80 +84,115 @@
     </head>
 
     <body>
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical is-8">
-        <div class="tile">
-          <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification has-background-success has-text-white">
-              <p class="title">Upcoming Matches</p>
-              <p class="subtitle"></p>
-            </article>
-            <article class="tile is-child notification is-info has-text-white">
-              <p class="title">Soccer Clubs</p>
-              <p class="subtitle"></p>
-              <div class="content">
-                <input id="teamName" class="input" type="text" placeholder="Team Name"> 
-                <button id="soccer-teams">Search</button>
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <div class="box">
+                <article class="tile is-child notification has-background-success has-text-white">
+                  <p class="title">Upcoming Matches</p>
+                  <p class="subtitle">
+                    Weather here ?
+                  </p>
+                </article>
               </div>
-              </article>
+              <div class="box">
+                <article class="tile is-child notification is-info has-text-white">
+                  <p class="title">Soccer Clubs</p>
+                  <p class="subtitle"></p>
+                  <div class="content">
+                    <input id="soccerTeamName" class="input" type="text" placeholder="Team Name"> 
+                    <button id="soccer-teams">Search</button>
+                  </div>
+                </article>
+              </div>
+              <div class="box">
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-info has-text-white">
+                    <p class="title">Soccer Players</p>
+                    <p class="subtitle"></p>
+                    <div class="content">
+                      <input id="soccerFirstName"class="input" type="text" placeholder="First Name">
+                      <input id="soccerLastName"class="input" type="text" placeholder="Last Name">
+                      <button id="soccer-players">Search</button>
+                      <!-- Content -->
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="box">
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-info has-text-white">
+                    <p class="title">Football Teams</p>
+                    <p class="subtitle"></p>
+                    <div class="content">
+                      <input id="footballTeamName"class="input" type="text" placeholder="Team Name">
+                      <button id="football-teams">Search</button>
+                      <!-- Content -->
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="box">
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-info has-text-white">
+                    <p class="title">Football Players</p>
+                    <p class="subtitle"></p>
+                    <div class="content">
+                      <input id="footballFirstName"class="input" type="text" placeholder="First Name">
+                      <input id="footballLastName"class="input" type="text" placeholder="Last Name">
+                      <button id="football-players">Search</button>
+                      <!-- Content -->
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-info has-text-white">
-            <p class="title">Soccer Players</p>
-            <p class="subtitle"></p>
-            <div class="content">
-              <input id="playerFirstName"class="input" type="text" placeholder="First Name">
-              <input id="playerLastName"class="input" type="text" placeholder="Last Name">
-              <button id="soccer-players">Search</button>
-              <!-- Content -->
+            
+            <div class="tile is-parent">
+              <article class="tile is-child notification has-background-danger has-text-white" id="classNews">
+                <div class="content">
+                  <p class="title">News</p>
+                  <p class="subtitle">Recent Headlines</p>
+              <div class="content">
+                <p class="subtitle">Recent Highlights</p>
+                <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/640x480.png">
+                <!-- Content -->
+              </figure>
             </div>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-info has-text-white">
-            <p class="title">Football Teams</p>
-            <p class="subtitle"></p>
-            <div class="content">
-              <input id="teamName"class="input" type="text" placeholder="Team Name">
-              <button id="football-teams">Search</button>
-              <!-- Content -->
-            </div>
-          </article>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-info has-text-white">
-            <p class="title">Football Players</p>
-            <p class="subtitle"></p>
-            <div class="content">
-              <input id="playerFirstName"class="input" type="text" placeholder="First Name">
-              <input id="playerLastName"class="input" type="text" placeholder="Last Name">
-              <button id="football-players">Search</button>
-              <!-- Content -->
-            </div>
+          </div>
           </article>
         </div>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification has-background-danger has-text-white" id="classNews">
-          <div class="content">
-            <p class="title">News</p>
-            <p class="subtitle">Recent Headlines</p>
-            <div class="content">
-              <p class="subtitle">Recent Highlights</p>
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-              <!-- Content -->
-            </figure>
-          </div>
+
+      <div class= "modal" id="myModal">
+        <div class= "modal-content">
+          <span class="close">
+            &times;
+          </span>
+          <p>Password Criteria</p>
+          <form action ="javascript:void(0);" onsubmit = "generatePassword()">
+          <label for = "passwordLength">Password Length (Between 8 and 128 characters)</label>
+          <input type = "number" id= "passwordLength" min = "8" max = "128" required><br>
+          <input type = "checkbox" id= "includeNumbers" class="form-check-input">
+          <label for = "includeNumbers" class="form-check-label">Include Numbers?</label><br>
+          <input type = "checkbox" id= "useLowerCase" class="form-check-input">
+          <label for = "useLowerCase" class="form-check-label">Include lower case characters?</label><br>
+          <input type = "checkbox" id= "useUpperCase" class="form-check-input">
+          <label for = "useUpperCase" class="form-check-label">Include upper case characters?</label><br>
+          <input type = "checkbox" id= "useSpecialChars" class="form-check-input">
+          <label for = "useSpecialChars" class="form-check-label" value="null">Include special characters?</label><br>
+          <button id= "submitbutton" type = "submit" class="btn">Submit</button>
+          </form>
         </div>
-        </article>
       </div>
-    </div>
- 
-<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js"></script>
-      </body>
+  
+        <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </head>
 </html>

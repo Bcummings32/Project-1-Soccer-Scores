@@ -70,6 +70,21 @@ $('#search-players').on('click', function searchNames(e){
                     console.log(playerFirstName);
                     console.log(playerLastName);
                 });
+$('#submitPlayerName').on('click', function searchNames(e){
+            e.preventDefault();
+                var soccerFirstName = $('#soccerFirstName').val();
+                var soccerLastName = $('#soccerLastName').val();
+                var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
+            $.ajax({
+                    url: queryURL,
+                    method: "GET"
+            }).then(function(response){
+                    console.log(queryURL);
+                    console.log(response);
+                    console.log(playerFirstName);
+                    console.log(playerLastName);
+                });
+ });
  //ajax for upcoming events
 $.ajax({
     url: "https://www.thesportsdb.com/api/v1/json/4013017/eventsnextleague.php?id=4328",
