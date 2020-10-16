@@ -1,5 +1,5 @@
 .box {
-  background-color: green;
+  background-color: mintcream;
 }
 
 .has-dropdown {
@@ -9,3 +9,8 @@
 .navbar {
   background-color: hsl(171, 100%, 96%);
 }
+
+.body {
+  margin: 25px;
+}
+/* trying to figure out bulma padding work around */
