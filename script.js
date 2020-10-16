@@ -1,11 +1,11 @@
 //functionality
 //sportsdb URL
-// document.ready(function() {
-//     $(".input").blur(function () {
-//         localStorage.setItem("Teams", $(this).val());
-//         console.log("click");
-//       });
-// },
+$(document).ready(function () {
+    $(".input").blur(function () {
+        localStorage.setItem("Teams", $(this).val());
+        console.log("click");
+      }
+      );
     // $.ajax({
     //     type: 'GET',
     //     url:
@@ -99,3 +99,4 @@ $.ajax({
     }).then(function(response){
         console.log(response);
     })})
+});
