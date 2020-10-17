@@ -96,78 +96,90 @@ $(document).ready(function () {
     //         $.each
     //     }
     // }),
-$('#submitPlayerName').on('click', function searchNames(e){
-        e.preventDefault();
-        var playerFirstName = $('#playerFirstName').val();
-        var playerLastName = $('#playerLastName').val();
-        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(queryURL);
-            console.log(response);
-            console.log(playerFirstName);
-            console.log(playerLastName);
-        })
-        }),
+
+
+//query for soccer team names
 $('#soccer-teams').on('click', function searchTeamName(t){
         t.preventDefault();
-        var teamName = $('#soccerTeamName').val();
-        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+teamName;
+        var soccerTeamName = $('#soccerTeamName').val();
+        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+soccerTeamName;
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function(response){
             console.log(queryURL);
-            console.log(response);
-            console.log(teamName);
+            console.log(response, 'response');
+            console.log(soccerTeamName);
+            $('#soccerAbout').append(response.teams[0].strDescriptionEN);
+            console.log('response.teams[0].strDescriptionEN:', response.teams.strDescriptionEN)
         })
         }),
-        //AJAX for search teams
- $('#search-teams').on('click', function searchTeamName(e){
-            e.preventDefault();
-               var teamName = $('#teamName').val();
-               var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+teamName;
-           $.ajax({
-                   url: queryURL,
-                   method: "GET"
-           }).then(function(response){
-                   console.log(queryURL);
-                   console.log(response);
-                   console.log(teamName);      
-           })
-           });
-            //ajax for search players
+//query for soccer player names
 $('#soccer-players').on('click', function searchNames(e){
-            e.preventDefault();
-                var playerFirstName = $('#soccerFirstName').val();
-                var playerLastName = $('#soccerLastName').val();
-                var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
-            $.ajax({
-                    url: queryURL,
-                    method: "GET"
-            }).then(function(response){
-                    console.log(queryURL);
-                    console.log(response);
-                    console.log(playerFirstName);
-                    console.log(playerLastName);
-                });
-$('#submitPlayerName').on('click', function searchNames(e){
             e.preventDefault();
                 var soccerFirstName = $('#soccerFirstName').val();
                 var soccerLastName = $('#soccerLastName').val();
-                var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
+                var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+soccerFirstName+"%20"+soccerLastName;
             $.ajax({
                     url: queryURL,
                     method: "GET"
             }).then(function(response){
                     console.log(queryURL);
-                    console.log(response);
-                    console.log(playerFirstName);
-                    console.log(playerLastName);
+                    console.log(response, 'response');
+                    console.log(soccerFirstName);
+                    console.log(soccerLastName);
+                    $('#soccerPlayerAbout').append(response.player[0].strDescriptionEN);
+                    console.log('response.player[0].strDescriptionEN:', response.player[0].strDescriptionEN)
                 });
- });
+
+
+        //AJAX for search teams
+//  $('#search-teams').on('click', function searchTeamName(e){
+//             e.preventDefault();
+//                var teamName = $('#teamName').val();
+//                var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+teamName;
+//            $.ajax({
+//                    url: queryURL,
+//                    method: "GET"
+//            }).then(function(response){
+//                    console.log(queryURL);
+//                    console.log(response);
+//                    console.log(teamName);      
+//            })
+//            });
+
+            //ajax for search players
+// $('#submitPlayerName').on('click', function searchNames(e){
+//         e.preventDefault();
+//         var playerFirstName = $('#playerFirstName').val();
+//         var playerLastName = $('#playerLastName').val();
+//         var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
+//         $.ajax({
+//             url: queryURL,
+//             method: "GET"
+//         }).then(function(response){
+//             console.log(queryURL);
+//             console.log(response);
+//             console.log(playerFirstName);
+//             console.log(playerLastName);
+//         })
+//         }),
+
+// $('#submitPlayerName').on('click', function searchNames(e){
+//             e.preventDefault();
+//                 var soccerFirstName = $('#soccerFirstName').val();
+//                 var soccerLastName = $('#soccerLastName').val();
+//                 var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
+//             $.ajax({
+//                     url: queryURL,
+//                     method: "GET"
+//             }).then(function(response){
+//                     console.log(queryURL);
+//                     console.log(response);
+//                     console.log(playerFirstName);
+//                     console.log(playerLastName);
+//                 });
+//  });
 
 //  //AJAX for event highlights
 //  $.ajax({
