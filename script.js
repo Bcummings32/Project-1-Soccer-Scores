@@ -1,5 +1,5 @@
 
-// Divs for upcoming matches
+
 
 
 $(document).ready(function () {
@@ -8,6 +8,7 @@ $(document).ready(function () {
         console.log("click");
       }
       );
+    //   Divs for upcoming matches
       var matchDiv1 = $(`   <div id= 'match1'>
                                 <div id='match1Name'></div>
                                 <div id='match1Time'></div>
