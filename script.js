@@ -22,7 +22,7 @@ $(document).ready(function () {
       var matchDiv3 = $(`   <div id= 'match3'>
                                 <div id='match3Name'></div>
                                 <div id='match3Time'></div>
-                                <div id='match
+                                <div id='match3Venue></div>
                             </div>`);
 
       $('#upcomingMatches').append(matchDiv1);
