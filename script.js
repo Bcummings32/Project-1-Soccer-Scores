@@ -1,11 +1,58 @@
-//functionality
-//sportsdb URL
+
+// Divs for upcoming matches
+
+
 $(document).ready(function () {
     $(".input").blur(function () {
         localStorage.setItem("Teams", $(this).val());
         console.log("click");
       }
       );
+      var matchDiv1 = $(`   <div id= 'match1'>
+                                <div id='match1Name'></div>
+                                <div id='match1Time'></div>
+                                <div id='match1Venue'></div>
+                            </div>`);
+      var matchDiv2 = $(`   <div id= 'match2'>
+                                <div id='match2Name'></div>
+                                <div id='match2Time'></div>
+                                <div id='match2Venue'></div>
+                            </div>`);
+      var matchDiv3 = $(`   <div id= 'match3'>
+                                <div id='match3Name'></div>
+                                <div id='match3Time'></div>
+                                <div id='match
+                            </div>`);
+
+      $('#upcomingMatches').append(matchDiv1);
+      $('#upcomingMatches').append(matchDiv2);
+      $('#upcomingMatches').append(matchDiv3);
+    $.ajax({
+        url: "https://www.thesportsdb.com/api/v1/json/4013017/eventsnextleague.php?id=4328",
+        method: "GET"
+        }).then(function(response){
+            console.log(response);
+            var match1Name =               response.events[0].strEvent;
+            var match1Time = "Game Starts "+response.events[0].strTime;
+            var match1Venue= "Venue: "    +response.events[0].strVenue;
+            var match2Name =               response.events[1].strEvent;
+            var match2Time = "Game Starts "+response.events[1].strTime;
+            var match2Venue= "Venue: "    +response.events[1].strVenue;
+            var match3Name =               response.events[2].strEvent;
+            var match3Time = "Game Starts "+response.events[2].strTime;
+            var match3Venue= "Venue: "    +response.events[2].strVenue;
+
+            $('#match1Name').append(match1Name);
+            $('#match1Time').append(match1Time);
+            $('#match1Venue').append(match1Venue);
+            $('#match2Name').append(match2Name);
+            $('#match2Time').append(match2Time);
+            $('#match2Venue').append(match2Venue);
+            $('#match3Name').append(match3Name);
+            $('#match3Time').append(match3Time);
+            $('#match3Venue').append(match3Venue);
+            
+     });
     // $.ajax({
     //     type: 'GET',
     //     url:
@@ -85,13 +132,7 @@ $('#submitPlayerName').on('click', function searchNames(e){
                     console.log(playerLastName);
                 });
  });
- //ajax for upcoming events
-$.ajax({
-    url: "https://www.thesportsdb.com/api/v1/json/4013017/eventsnextleague.php?id=4328",
-    method: "GET"
-    }).then(function(response){
-        console.log(response);
-    });
+
  //AJAX for event highlights
  $.ajax({
     url: "https://www.thesportsdb.com/api/v1/json/4013017/eventshighlights.php?s=Soccer",
