@@ -17,11 +17,13 @@ $(document).ready(function () {
                             </div>`);
       var matchDiv2 = $(`   <div id= 'match2'>
                                 <div id='match2Name'></div>
+                                <div id='match2Date'></div>
                                 <div id='match2Time'></div>
                                 <div id='match2Venue'></div>
                             </div>`);
       var matchDiv3 = $(`   <div id= 'match3'>
                                 <div id='match3Name'></div>
+                                <div id='match3Date'></div>
                                 <div id='match3Time'></div>
                                 <div id='match3Venue'></div>
                             </div>`);
@@ -35,23 +37,29 @@ $(document).ready(function () {
         }).then(function(response){
             console.log(response);
             var match1Name =               response.events[0].strEvent;
-            var match1Date = "Date: "    +response.events[0].dateEvent;
-            var match1Venue= "Venue: "    +response.events[0].strVenue;
+            var match1Date = " "    +response.events[0].dateEvent;
+            var match1Time = " at " +response.events[0].strTime;
+            var match1Venue= "@ "    +response.events[0].strVenue;
             var match2Name =               response.events[1].strEvent;
-            var match2Date = "Date: "    +response.events[1].dateEvent;
-            var match2Venue= "Venue: "    +response.events[1].strVenue;
+            var match2Date = " "    +response.events[1].dateEvent;
+            var match2Time = " at " +response.events[1].strTime;
+            var match2Venue= "@ "    +response.events[1].strVenue;
             var match3Name =               response.events[2].strEvent;
-            var match3Date = "Date: "     +response.events[2].dateEvent;
-            var match3Venue= "Venue: "    +response.events[2].strVenue;
+            var match3Date = " "     +response.events[2].dateEvent;
+            var match3Time = " at " +response.events[2].strTime;
+            var match3Venue= "@ "    +response.events[2].strVenue;
 
             $('#match1Name').append(match1Name);
-            $('#match1Time').append(match1Date);
+            $('#match1Date').append(match1Date);
+            $('#match1Time').append(match1Time);
             $('#match1Venue').append(match1Venue);
             $('#match2Name').append(match2Name);
-            $('#match2Time').append(match2Date);
+            $('#match2Date').append(match2Date);
+            $('#match2Time').append(match2Time);
             $('#match2Venue').append(match2Venue);
             $('#match3Name').append(match3Name);
-            $('#match3Time').append(match3Date);
+            $('#match3Date').append(match3Date);
+            $('#match3Time').append(match3Time);
             $('#match3Venue').append(match3Venue);
             
      });
