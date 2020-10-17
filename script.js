@@ -99,7 +99,7 @@ $('#soccer-teams').on('click', function searchTeamName(t){
             console.log(queryURL);
             console.log(response, 'response');
             console.log(soccerTeamName);
-            $('#soccerAbout').append(response.teams[0].strDescriptionEN);
+            $('#soccerAbout').empty().append(response.teams[0].strDescriptionEN);
             console.log('response.teams[0].strDescriptionEN:', response.teams.strDescriptionEN)
         })
         }),
@@ -117,7 +117,7 @@ $('#soccer-players').on('click', function searchNames(e){
                     console.log(response, 'response');
                     console.log(soccerFirstName);
                     console.log(soccerLastName);
-                    $('#soccerPlayerAbout').append(response.player[0].strDescriptionEN);
+                    $('#soccerPlayerAbout').empty().append(response.player[0].strDescriptionEN);
                     console.log('response.player[0].strDescriptionEN:', response.player[0].strDescriptionEN)
                 });
 
