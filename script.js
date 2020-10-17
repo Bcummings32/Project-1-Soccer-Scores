@@ -119,5 +119,3 @@ $('#soccer-players').on('click', function searchNames(e){
                     $('#soccerPlayerAbout').append(response.player[0].strDescriptionEN);
                     console.log('response.player[0].strDescriptionEN:', response.player[0].strDescriptionEN)
                 });
-
-});
