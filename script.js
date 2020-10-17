@@ -68,6 +68,26 @@ $(document).ready(function () {
         method: "GET"
         }).then(function(response){
             console.log(response);
+            $('#event1').attr('href', response.tvhighlights[0].strVideo);
+            $('#event1').text(response.tvhighlights[0].strEvent);
+            $('#event2').attr('href', response.tvhighlights[1].strVideo);
+            $('#event2').text(response.tvhighlights[1].strEvent);
+            $('#event3').attr('href', response.tvhighlights[2].strVideo);
+            $('#event3').text(response.tvhighlights[2].strEvent);
+            $('#event4').attr('href', response.tvhighlights[3].strVideo);
+            $('#event4').text(response.tvhighlights[3].strEvent);
+            $('#event5').attr('href', response.tvhighlights[4].strVideo);
+            $('#event5').text(response.tvhighlights[4].strEvent);
+            $('#event6').attr('href', response.tvhighlights[5].strVideo);
+            $('#event6').text(response.tvhighlights[5].strEvent);
+            $('#event7').attr('href', response.tvhighlights[6].strVideo);
+            $('#event7').text(response.tvhighlights[6].strEvent);
+            $('#event8').attr('href', response.tvhighlights[7].strVideo);
+            $('#event8').text(response.tvhighlights[7].strEvent);
+            $('#event9').attr('href', response.tvhighlights[8].strVideo);
+            $('#event9').text(response.tvhighlights[8].strEvent);
+            $('#event10').attr('href', response.tvhighlights[9].strVideo);
+            $('#event10').text(response.tvhighlights[9].strEvent);
         })})
     // $.ajax({
     //     type: 'GET',
