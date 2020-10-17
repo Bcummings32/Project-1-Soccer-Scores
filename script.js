@@ -63,6 +63,12 @@ $(document).ready(function () {
             $('#match3Venue').append(match3Venue);
             
      });
+     $.ajax({
+        url: "https://www.thesportsdb.com/api/v1/json/4013017/eventshighlights.php?s=Soccer",
+        method: "GET"
+        }).then(function(response){
+            console.log(response);
+        })})
     // $.ajax({
     //     type: 'GET',
     //     url:
@@ -143,11 +149,11 @@ $('#submitPlayerName').on('click', function searchNames(e){
                 });
  });
 
- //AJAX for event highlights
- $.ajax({
-    url: "https://www.thesportsdb.com/api/v1/json/4013017/eventshighlights.php?s=Soccer",
-    method: "GET"
-    }).then(function(response){
-        console.log(response);
-    })})
+//  //AJAX for event highlights
+//  $.ajax({
+//     url: "https://www.thesportsdb.com/api/v1/json/4013017/eventshighlights.php?s=Soccer",
+//     method: "GET"
+//     }).then(function(response){
+//         console.log(response);
+//     })})
 });
