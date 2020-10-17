@@ -96,6 +96,67 @@ $(document).ready(function () {
     //         $.each
     //     }
     // }),
+    // Changed client-side storage to store persistent data
+    $( "#soccer-teams" ).click(function() { 
+        var soccerTeams = $('#soccerTeamName').val();
+        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+soccerTeams;
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            dataType: "json"
+        }).then(function(response){
+        localStorage.setItem(soccerTeams, JSON.stringify(response));
+        $(".card").html(JSON.stringify(response));
+            console.log(queryURL);
+            console.log(response);
+        })
+    });
+
+    $( "#soccer-players" ).click(function() { 
+        var soccerPlayers = $('#soccerFirstName').val();
+        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+soccerPlayers;
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            dataType: "json"
+        }).then(function(response){
+        localStorage.setItem(soccerPlayers, JSON.stringify(response));
+        $(".card").html(JSON.stringify(response));
+            console.log(queryURL);
+            console.log(response);
+        })
+    });
+
+    $( "#football-teams" ).click(function() { 
+        var footballTeams = $('#footballTeamName').val();
+        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+footballTeams;
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            dataType: "json"
+        }).then(function(response){
+        localStorage.setItem(footballTeams, JSON.stringify(response));
+        $(".card").html(JSON.stringify(response));
+            console.log(queryURL);
+            console.log(response);
+        })
+    });
+
+    $( "#football-players" ).click(function() { 
+        var footballPlayers = $('#footballFirstName, footballLastName').val();
+        var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+footballPlayers;
+        $.ajax({
+            url: queryURL,
+            method: "GET",
+            dataType: "json"
+        }).then(function(response){
+        localStorage.setItem(footballPlayers, JSON.stringify(response));
+        $(".card").html(JSON.stringify(response));
+            console.log(queryURL);
+            console.log(response);
+        })
+    });
+
 $('#submitPlayerName').on('click', function searchNames(e){
         e.preventDefault();
         var playerFirstName = $('#playerFirstName').val();
@@ -169,11 +230,4 @@ $('#submitPlayerName').on('click', function searchNames(e){
                 });
  });
 
-//  //AJAX for event highlights
-//  $.ajax({
-//     url: "https://www.thesportsdb.com/api/v1/json/4013017/eventshighlights.php?s=Soccer",
-//     method: "GET"
-//     }).then(function(response){
-//         console.log(response);
-//     })})
-});
+
