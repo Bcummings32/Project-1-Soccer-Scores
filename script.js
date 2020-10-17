@@ -11,6 +11,7 @@ $(document).ready(function () {
     //   Divs for upcoming matches
       var matchDiv1 = $(`   <div id= 'match1'>
                                 <div id='match1Name'></div>
+                                <div id='match1Date'></div>
                                 <div id='match1Time'></div>
                                 <div id='match1Venue'></div>
                             </div>`);
@@ -22,7 +23,7 @@ $(document).ready(function () {
       var matchDiv3 = $(`   <div id= 'match3'>
                                 <div id='match3Name'></div>
                                 <div id='match3Time'></div>
-                                <div id='match3Venue></div>
+                                <div id='match3Venue'></div>
                             </div>`);
 
       $('#upcomingMatches').append(matchDiv1);
@@ -34,23 +35,23 @@ $(document).ready(function () {
         }).then(function(response){
             console.log(response);
             var match1Name =               response.events[0].strEvent;
-            var match1Time = "Game Starts "+response.events[0].strTime;
+            var match1Date = "Date: "    +response.events[0].dateEvent;
             var match1Venue= "Venue: "    +response.events[0].strVenue;
             var match2Name =               response.events[1].strEvent;
-            var match2Time = "Game Starts "+response.events[1].strTime;
+            var match2Date = "Date: "    +response.events[1].dateEvent;
             var match2Venue= "Venue: "    +response.events[1].strVenue;
             var match3Name =               response.events[2].strEvent;
-            var match3Time = "Game Starts "+response.events[2].strTime;
+            var match3Date = "Date: "     +response.events[2].dateEvent;
             var match3Venue= "Venue: "    +response.events[2].strVenue;
 
             $('#match1Name').append(match1Name);
-            $('#match1Time').append(match1Time);
+            $('#match1Time').append(match1Date);
             $('#match1Venue').append(match1Venue);
             $('#match2Name').append(match2Name);
-            $('#match2Time').append(match2Time);
+            $('#match2Time').append(match2Date);
             $('#match2Venue').append(match2Venue);
             $('#match3Name').append(match3Name);
-            $('#match3Time').append(match3Time);
+            $('#match3Time').append(match3Date);
             $('#match3Venue').append(match3Venue);
             
      });
