@@ -57,7 +57,8 @@ $(document).ready(function () {
             $('#match3Date').append(match3Date);
             $('#match3Time').append(match3Time);
             $('#match3Venue').append(match3Venue);
-            
+    
+    // ajax call for match highlights
      });
      $.ajax({
         url: "https://www.thesportsdb.com/api/v1/json/4013017/eventshighlights.php?s=Soccer",
@@ -119,3 +120,5 @@ $('#soccer-players').on('click', function searchNames(e){
                     $('#soccerPlayerAbout').append(response.player[0].strDescriptionEN);
                     console.log('response.player[0].strDescriptionEN:', response.player[0].strDescriptionEN)
                 });
+
+});
