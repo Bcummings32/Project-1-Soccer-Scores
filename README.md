@@ -9,4 +9,10 @@ Technologies Used:
 -Javascript
 -JQuery
 
+Contributors:
+Patrick Narmi
+Chris Banks
+Ella Thompson
+Ben Cummings
+
 https://bcummings32.github.io/Project-1-Soccer-Scores/
