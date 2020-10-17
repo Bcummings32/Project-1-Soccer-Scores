@@ -91,9 +91,9 @@ $('#submitPlayerName').on('click', function searchNames(e){
             console.log(playerLastName);
         })
         }),
-$('#stats').on('click', function searchTeamName(t){
+$('#soccer-teams').on('click', function searchTeamName(t){
         t.preventDefault();
-        var teamName = $('#comment').val();
+        var teamName = $('#soccerTeamName').val();
         var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchteams.php?t="+teamName;
         $.ajax({
             url: queryURL,
@@ -119,10 +119,10 @@ $('#stats').on('click', function searchTeamName(t){
            })
            });
             //ajax for search players
-$('#search-players').on('click', function searchNames(e){
+$('#soccer-players').on('click', function searchNames(e){
             e.preventDefault();
-                var playerFirstName = $('#playerFirstName').val();
-                var playerLastName = $('#playerLastName').val();
+                var playerFirstName = $('#soccerFirstName').val();
+                var playerLastName = $('#soccerLastName').val();
                 var queryURL= "https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?p="+playerFirstName+"%20"+playerLastName;
             $.ajax({
                     url: queryURL,
