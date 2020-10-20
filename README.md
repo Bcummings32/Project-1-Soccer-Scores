@@ -4,6 +4,19 @@ This is a group project that uses web APIs to get team & player stats for soccer
 
 https://bcummings32.github.io/Project-1-Soccer-Scores/
 
+# Technologies Used:
+- HTML
+- CSS
+- Bulma
+- Javascript
+- JQuery
+
+# Contributors:
+- Patrick Narmi
+- Chris Banks
+- Ella Thompson
+- Ben Cummings
+
 # Technologies Used
 
 - HTML
